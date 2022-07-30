@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+    --left-bg-color: rgba(87, 84, 236, 0.7);
+    --right-bg-color: rgba(43, 43, 43, 0.5);
+    --left-btn-hoover-color: rgba(87, 84, 236, 1);
+    --right-btn-hoover-color: rgba(28, 122, 28, 1);
+    --hoover-width: 75%;
+    --minimize-width: 25%;
+    --transition-speed: 1s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #333;
+}
+
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.split.left {
+    left: 0;
+    background: url(./img/new\ client.jpg) no-repeat center / cover;
+}
+
+.split.left::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--right-bg-color);
+}
+
+.split.right {
+    right: 0;
+    background: url(./img/old\ client.webp) no-repeat center / cover;
+}
+
+.split.right::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--right-bg-color);
+}
+
+.split.left, .split.right, .split.left::before, .split.right::before {
+    transition: all var(--transition-speed) ease-in-out;
+}
+
+.hover-left .left {
+    width: var(--hoover-width);
+}
+
+.hover-left .right {
+    width: var(--minimize-width);
+}
+
+.hover-right .right {
+    width: var(--hoover-width);
+}
+
+.hover-right .left {
+    width: var(--minimize-width);
+}
+
+.bg-img {
+    background: url(./heroSection.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-img::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.174);
+}
+.content {
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    text-align: center;
+    padding: 60px 32px;
+    width: 370px;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.133);
+    border: 1px solid #fff;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 6px 0 rgba(29, 29, 29, 0.203);
+}
+
+.content header {
+    color: white;
+    font-size: 33px;
+    font-weight: 600;
+    margin: 0 0 35px 0;
+    font-family: sans-serif;
+}
+
+.field {
+    position: relative;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    background: rgba(255, 255, 255, 0.94);
+}
+
+.field span {
+    color: #222;
+    width: 40px;
+    line-height: 45px;
+}
+
+.field input {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #222;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.space {
+    margin-top: 16px;
+}
+
+.show {
+    position: absolute;
+    right: 13px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #222;
+    display: none;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+.pass-key:valid ~ .show {
+    display: block;
+}
+
+.pass {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.pass a {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.pass:hover a {
+    text-decoration: underline;
+}
+
+.field input[type="submit"] {
+    background: #682efc;
+    border: 1px 0 #7741fd;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: .3s ease;
+}
+
+.field input[type="submit"]:hover {
+    background: #4a0de4f5;
+}
+
+.login {
+    color: white;
+    margin: 20px 0;
+    font-family: sans-serif;
+}
+
+i span {
+    margin-left: 8px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-family: sans-serif;
+}
