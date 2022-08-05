@@ -20,17 +20,20 @@
 
         <div class="container">
           <select class="field" name="marca" id="marca">
-            <option value="0">Marca</option>
-            <option value="1">Citroen</option>
-            <option value="2">Chevrolet</option>
-            <option value="3">Toyota</option>
-            <option value="4">RAM</option>
-            <option value="5">Dodge</option>
-            <option value="6">Fiat</option>
-            <option value="7">Audi</option>
-            <option value="8">Peugeot</option>
-            <option value="9">Jeep</option>
+            <option value="0" selected>Filtrar por marca</option>
+            <option value="Citroen">Citroen</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Toyota">Toyota</option>
+            <option value="RAM">RAM</option>
+            <option value="Dodge">Dodge</option>
+            <option value="Fiat">Fiat</option>
+            <option value="Audi">Audi</option>
+            <option value="Peugeot">Peugeot</option>
+            <option value="Jeep">Jeep</option>
           </select>
+        </div>
+        <div class="container">
+          <button onclick="filtro()">Filtrar</button>
         </div>
 
         <ul class="nav__link nav__link--menu">
@@ -63,7 +66,7 @@
     <div class="image-gallery">
 
       <div class="image-container">
-        <div class="image-box">
+        <div class="image-box" id="Toyota">
             <img class="logoImg" src="./images/yaris.webp" alt="">
           <div class="logo_icons">
             <a href="#">
@@ -81,13 +84,13 @@
         </div>
 
 
-        <div class="image-box">
+        <div class="image-box" id="Chevrolet">
           <img class="logoImg" src="./images/classic.webp" alt="">
         <div class="logo_icons">
           <a href="#">
               <img class="logoImg" src="./images/classic.webp" alt="">
             <div class="text_content">
-              <span class="name">CHevrolet classic</span>
+              <span class="name">Chevrolet classic</span>
               <span class="followers">$720.000</span>
             </div>
           </a>
@@ -99,7 +102,7 @@
       </div>
 
 
-      <div class="image-box">
+      <div class="image-box" id="RAM">
         <img class="logoImg" src="./images/1500.jpg" alt="">
       <div class="logo_icons">
         <a href="#">
@@ -117,7 +120,7 @@
     </div>
 
 
-    <div class="image-box">
+    <div class="image-box" id="Peugeot">
       <img class="logoImg" src="./images/308.webp" alt="">
     <div class="logo_icons">
       <a href="#">
@@ -135,7 +138,7 @@
   </div>
 
 
-  <div class="image-box">
+  <div class="image-box" id="Fiat">
     <img class="logoImg" src="./images/500.jpg" alt="">
   <div class="logo_icons">
     <a href="#">
@@ -153,7 +156,7 @@
 </div>
 
 
-<div class="image-box">
+<div class="image-box" id="Audi">
   <img class="logoImg" src="./images/a1.jpg" alt="">
 <div class="logo_icons">
   <a href="#">
@@ -171,7 +174,7 @@
 </div>
 
 
-<div class="image-box">
+<div class="image-box" id="Jeep">
   <img class="logoImg" src="./images/compass.jpg" alt="">
 <div class="logo_icons">
   <a href="#">
@@ -189,7 +192,7 @@
 </div>
 
 
-<div class="image-box">
+<div class="image-box" id="Dodge">
   <img class="logoImg" src="./images/journey.jpg" alt="">
 <div class="logo_icons">
   <a href="#">
@@ -207,14 +210,14 @@
 </div>
 
 
-<div class="image-box">
-  <img class="logoImg" src="./images/product-1.jpg" alt="">
+<div class="image-box" id="Citroen">
+  <img class="logoImg" src="./images/c3.jpg" alt="">
 <div class="logo_icons">
   <a href="#">
-      <img class="logoImg" src="./images/product-1.jpg" alt="">
+      <img class="logoImg" src="./images/c3.jpg" alt="">
     <div class="text_content">
-      <span class="name">CodingLab</span>
-      <span class="followers">50k followers</span>
+      <span class="name">Citroen C3</span>
+      <span class="followers">$1.800.000</span>
     </div>
   </a>
   <div class="icons">
