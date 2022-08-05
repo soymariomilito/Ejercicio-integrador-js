@@ -343,6 +343,41 @@ section .image-gallery .text_content .followers{
   margin-top: -4px;
 }
 
+.hidden {
+  height: 0;
+  width: 0;
+}
+
+.hidden .logo_icons .icons i{
+  height: 0;
+  width: 0;
+  z-index: 0;
+}
+
+.hidden .logo_icons .text_content {
+  height: 0;
+  width: 0;
+}
+
+.hidden .logo_icons a{
+  height: 0;
+  width: 0;
+}
+
+.hidden .logo_icons .logoImg {
+  height: 0;
+  width: 0;
+}
+
+.hidden {
+  height: 0;
+  width: 0;
+}
+
+.hidden a {
+  height: 0;
+  width: 0;
+}
 /* Media queries */
 
 @media (max-width:800px){
